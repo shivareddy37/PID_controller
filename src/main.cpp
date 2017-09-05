@@ -69,7 +69,7 @@ int main()
           // not the prefect relation but the equation makes the car smoothly maintaine 
           // its poition in center of the road
 
-          msgJson["throttle"] = 0.35  + 0.5 * steer_value;
+          msgJson["throttle"] = 0.30 - 0.5 * steer_value ;
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
