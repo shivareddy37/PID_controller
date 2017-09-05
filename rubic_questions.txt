@@ -1,0 +1,10 @@
+1. Student describes the effect of the P, I, D component of the PID algorithm in their implementation. Is it what you expected?
+
+Answer1 : The TotalError() function is called from the main (line 59) to compute the total cross talk error the following observations were made 
+a) When only Propotional Error was used the case ossicated between the left and right extremes before going off the curb in an unrecoverable state. This is expected because with just propotioanl gain the with some refrence throttle the car doesn't have enough time to recover quickly.
+b) When using PD components only the car was able to drive but the near curve the adjustment was too last minute and sudden which is not desirable when humans are driving the car.
+c) When using ALL PID components the car was able to maintain the center lane position fairly well and smootly as it is expected to do, due to intoduction if the integral term in the error.
+
+2.Student discusses how they chose the final hyperparameters (P, I, D coefficients). This could be have been done through manual tuning, twiddle, SGD, or something else, or a combination!
+
+Answer2 : The Hyper parametrs for PID where manually choose and adjusted further based on its performance in driving the car. The Final values that were choosen were (0.2, 0.004, 0.3) for P, I, D respectively. The inital values were choosen form the class tutorials and from the each parmter was manually tuned until desired driving result was achived.
